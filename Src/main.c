@@ -53,29 +53,29 @@ int main(void)
   /* GPIOA pin 3 and 4 setup */
 
   /*GPIO MODER register*/
+  //Set mode for pin 4
+  *((volatile uint32_t *)((uint32_t)0x48000000)) &= ~(uint32_t)(0x3 << 8);
+  *((volatile uint32_t *)((uint32_t)0x48000000)) |= (uint32_t)(1 << 8);
   //Set mode for pin 3
-  *((volatile uint32_t *)((uint32_t)0x48000400)) &= ~(uint32_t)(0x3 << 6);
-  *((volatile uint32_t *)((uint32_t)0x48000400)) |= (uint32_t)(1 << 6);
-  //Set mode for pin 6
-  *((volatile uint32_t *)((uint32_t)0x48000400)) &= ~(uint32_t)(0x3 << 12);
+  *((volatile uint32_t *)((uint32_t)0x48000000)) &= ~(uint32_t)(0x3 << 6);
 
   /*GPIO OTYPER register*/
-  *((volatile uint32_t *)((uint32_t)(0x48000400 + 0x04U))) &= ~(1 << 3);
+  *((volatile uint32_t *)((uint32_t)(0x48000000 + 0x04U))) &= ~(1 << 3);
 
   /*GPIO OSPEEDR register*/
-  //Set Low speed for GPIOB pin 3
-  *((volatile uint32_t *)((uint32_t)(0x48000400 + 0x08U))) &= ~(0x3 << 6);
+  //Set Low speed for GPIOA pin 3
+  *((volatile uint32_t *)((uint32_t)(0x48000000 + 0x08U))) &= ~(0x3 << 6);
 
   /*GPIO PUPDR register, reset*/
   //Set pull up for GPIOA pin 3 (input)
-  *((volatile uint32_t *)((uint32_t)(0x48000400 + 0x0CU))) |= (1 << 12);
+  *((volatile uint32_t *)((uint32_t)(0x48000000 + 0x0CU))) |= (1 << 6);
   //Set no pull for GPIOA pin 4
-  *((volatile uint32_t *)((uint32_t)(0x48000400 + 0x0CU))) &= ~(0x3 << 6);
+  *((volatile uint32_t *)((uint32_t)(0x48000000 + 0x0CU))) &= ~(0x3 << 8);
 
 
   while (1)
   {
-	  if(!(*((volatile uint32_t *)((uint32_t)(0x48000400 + 0x10U))) & (1 << 6)))
+	  if(!(*((volatile uint32_t *)((uint32_t)(0x48000000 + 0x10U))) & (1 << 6)))
 	  {
 		  // 0.25s delay
 		  LL_mDelay(250);
