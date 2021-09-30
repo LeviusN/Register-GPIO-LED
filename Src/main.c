@@ -75,7 +75,7 @@ int main(void)
 
   while (1)
   {
-	  if(!(*((volatile uint32_t *)((uint32_t)(0x48000000 + 0x10U))) & (1 << 6)))
+	  if(BUTTON_GET_STATE)
 	  {
 		  // 0.25s delay
 		  LL_mDelay(250);
