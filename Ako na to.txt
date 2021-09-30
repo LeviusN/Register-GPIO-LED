@@ -1,0 +1,29 @@
+
+Ked to uz len upravujem
+git add .
+git commit -m "initial commit"
+git push origin main
+
+
+git show-ref
+git remote add origin https://github.com/LeviusN/VRS.git
+git remote remove origin
+LeviusN Tesla221295
+
+
+
+https://stackoverflow.com/questions/20948621/what-does-mean
+
+https://stackoverflow.com/questions/62128126/how-to-configure-swd-pins-using-registers-in-stm32
+
+http://www.learningaboutelectronics.com/Articles/How-to-select-alternate-functionality-for-a-GPIO-pin-STM32F407G-C.php
+
+https://microchipdeveloper.com/32arm:sam-bare-metal-c-programming
+
+
+
+
+
+https://stackoverflow.com/questions/34768346/pointer-to-volatile-data-volatile-uint32-t-0x40000000
+
+https://www.eevblog.com/forum/microcontrollers/stm32-macro-for-port-and-pin-read-and-write/
