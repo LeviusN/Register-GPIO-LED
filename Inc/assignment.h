@@ -44,7 +44,7 @@
 #define LED_ON					*((volatile uint32_t *)((uint32_t)(0x48000000 + 0x18U))) |= (1 << 4)/* Add LED_ON implementation here. */
 #define LED_OFF					*((volatile uint32_t *)((uint32_t)0x48000000 + 0x28U)) |= (1 << 4);/* Add LED_OFF implementation here. */
 
-#define BUTTON_GET_STATE		*((volatile uint32_t *)((uint32_t)(0x48000400 + 0x10U)))/* Add BUTTON_GET_STATE implementation here. */
+#define BUTTON_GET_STATE		*((volatile uint32_t *)((uint32_t)(0x48000000 + 0x10U)))/* Add BUTTON_GET_STATE implementation here. */
 
 
 #endif /* ASSIGNMENT_H_ */
