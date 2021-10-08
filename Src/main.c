@@ -47,12 +47,7 @@ int main(void)
 
   /* Enable clock for GPIO port A*/
 
-<<<<<<< HEAD
   RCC_AHBENR_REG |= (uint32_t)(1 << 17);//type your code for GPIOA clock enable here:
-=======
-  *((volatile uint32_t *) (uint32_t)(0x40021000 + 0x00000014U)) |= (uint32_t)(1 << 17);//type your code for GPIOA clock enable here:
->>>>>>> 4e115af (initial commit)
-
 
   /* GPIOA pin 3 and 4 setup */
 
@@ -79,26 +74,22 @@ int main(void)
 
   while (1)
   {
-<<<<<<< HEAD
-	  if( !(BUTTON_GET_STATE & (1 << 6)))
-=======
-	  if(!(*((volatile uint32_t *)((uint32_t)(0x48000000 + 0x10U))) & (1 << 3)))
->>>>>>> 4e115af (initial commit)
+	  if(!(BUTTON_GET_STATE & (1 << 3)))
 	  {
 		  // 0.25s delay
-		  LL_mDelay(1000);
+		  LL_mDelay(250);
 		  LED_ON;
 		  // 0.25s delay
-		  LL_mDelay(1000);
+		  LL_mDelay(250);
 		  LED_OFF;
 	  }
 	  else
 	  {
 		  // 1s delay
-		  LL_mDelay(250);
+		  LL_mDelay(1000);
 		  LED_ON;
 		  // 1s delay
-		  LL_mDelay(250);
+		  LL_mDelay(1000);
 		  LED_OFF;
 	  }
   }
