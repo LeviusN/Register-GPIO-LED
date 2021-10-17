@@ -46,5 +46,6 @@
 
 #define BUTTON_GET_STATE		*((volatile uint32_t *)((uint32_t)(0x48000000 + 0x10U)))/* Add BUTTON_GET_STATE implementation here. */
 
+#define EDGE_TYPE edgeDetect(uint8_t pin_state, uint8_t samples);
 
 #endif /* ASSIGNMENT_H_ */

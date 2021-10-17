@@ -47,12 +47,7 @@ int main(void)
 
   /* Enable clock for GPIO port A*/
 
-<<<<<<< HEAD
   RCC_AHBENR_REG |= (uint32_t)(1 << 17);//type your code for GPIOA clock enable here:
-=======
-  *((volatile uint32_t *) (uint32_t)(0x40021000 + 0x00000014U)) |= (uint32_t)(1 << 17);//type your code for GPIOA clock enable here:
->>>>>>> 4e115af (initial commit)
-
 
   /* GPIOA pin 3 and 4 setup */
 
@@ -75,35 +70,60 @@ int main(void)
   GPIOA_PUPDR_REG |= (1 << 6);
   //Set no pull for GPIOA pin 4
   GPIOA_PUPDR_REG &= ~(0x3 << 8);
-
+  volatile char buttonPressed=0;
+  volatile int buttonPressedNum = 0;
+  volatile int buttonReleasedNum = 0;
+  volatile int Num=20;
+  volatile char LEDState = 0;
 
   while (1)
   {
-<<<<<<< HEAD
-	  if( !(BUTTON_GET_STATE & (1 << 6)))
-=======
-	  if(!(*((volatile uint32_t *)((uint32_t)(0x48000000 + 0x10U))) & (1 << 3)))
->>>>>>> 4e115af (initial commit)
+	  if(GPIOA->IDR & GPIO_IDR_3)
 	  {
-		  // 0.25s delay
-		  LL_mDelay(1000);
-		  LED_ON;
-		  // 0.25s delay
-		  LL_mDelay(1000);
-		  LED_OFF;
+		if(buttonPressed==0)
+		{
+			buttonPressedNum++;
+			buttonReleasedNum=0;
+			if(buttonPressedNum > Num)
+			{
+				if(LEDState == 0){
+					LEDState=1;
+					LED_ON;
+				}
+				else{
+					LEDState=0;
+					LED_OFF;
+				}
+				buttonPressed=1;
+			}
+			else
+			{
+				buttonPressedNum++;
+				buttonReleasedNum=0;
+			}
+		}
 	  }
 	  else
 	  {
-		  // 1s delay
-		  LL_mDelay(250);
-		  LED_ON;
-		  // 1s delay
-		  LL_mDelay(250);
-		  LED_OFF;
+		  if(buttonPressed==1)
+		  {
+			  buttonReleasedNum++;
+			  buttonPressedNum = 0;
+			  if(buttonReleasedNum > Num)
+			  {
+				  buttonPressed=0;
+			  }
+			  else
+			  {
+				  buttonReleasedNum++;
+				  buttonPressedNum = 0;
+			  }
+		  }
 	  }
-  }
+	  }
 
 }
+
 
 /* USER CODE BEGIN 4 */
 
