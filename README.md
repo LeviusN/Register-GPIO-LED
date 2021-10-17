@@ -1,4 +1,3 @@
-![246132257_353892393193679_9189623530578647884_n](https://user-images.githubusercontent.com/91337423/137629581-911c12e1-3aac-4650-bb3b-7be5339425de.gif)
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/91337423/137645201-8863a766-f2b3-4f61-a516-4ab60bd9b442.gif)
 
 # Náplň cvičenia
