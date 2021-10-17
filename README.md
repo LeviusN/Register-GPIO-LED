@@ -1,4 +1,4 @@
-![246132257_353892393193679_9189623530578647884_n](https://user-images.githubusercontent.com/91337423/137629581-911c12e1-3aac-4650-bb3b-7be5339425de.gif)
+![246132257_353892393193679_9189623530578647884_n](https://user-images.githubusercontent.com/91337423/137629581-911c12e1-3aac-4650-bb3b-7be5339425de.gif|Centred)
 
 # Náplň cvičenia
 - zoznámenie sa s registrami mikrokontrolera stm32-F3xx
