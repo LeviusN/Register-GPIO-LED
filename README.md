@@ -7,6 +7,9 @@
 - LED je pripojena na port A3 (PA_4)
 - Button je pripojeny na port A2 (PA_3)
 
+<p align="center">
+<img src=https://user-images.githubusercontent.com/91337423/137890811-45de0460-497d-4742-a161-4e85b5de2ae7.PNG>
+</p>
 
 # Náplň cvičenia
 - zoznámenie sa s registrami mikrokontrolera stm32-F3xx
