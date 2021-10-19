@@ -1,4 +1,6 @@
-
+<p align="center">
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/91337423/137889815-e7f295ef-2b72-449f-a87b-d44cee53eeac.gif)
+</p>
 
 # Náplň cvičenia
 - zoznámenie sa s registrami mikrokontrolera stm32-F3xx
