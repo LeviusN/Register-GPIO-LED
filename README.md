@@ -12,12 +12,6 @@
 </p>
 
 
-# Náplň cvičenia
-- zoznámenie sa s registrami mikrokontrolera stm32-F3xx
-- priami prístup k registrom mikrokontrolera
-- zoznámenie sa s perifériou GPIO – ako funguje, vlastnosti
-- konfigurácia GPIO portu a jednotlivých pinov
-
 # GPIO port
 <p align="center">
     <img src="https://bluetechs.files.wordpress.com/2013/12/115.png" width="600" title="GPIO pin block scheme">
@@ -69,16 +63,7 @@ Pre nastavenie konkrétnych bitov v registry sa využije "maska". Kedže sa ide 
 & 0b00011000    <- maska   
 = 0b00001000    <- prečítaná hodnota z registra </pre>
 
-# Zadanie
-- Upravte ukážkový program tak, aby bol vstup (tlačidlo) načítavaný cez pin GPIOA-3 a výstup (LED) vyvedený na pin GPIOA-4.
-- Ukážkový program sa nachádza vo vetve (branch) "master". Šablóna, podľa ktorej sa vypracuje zadanie, sa nachádza vo vetve "zadanie_cv2".
-### Úlohy:
- 1. Stiahnúť/naklonovať vetvu "zadanie_cv2", ktorá predstavuje šablónu projektu, do ktorej je nutné vypracovať nasledujúce úlohy.
- 2. Pre svoje zadanie si vtvoriť vlastný github repozitár, kam sa nahraje stiahnutá šablóná.
- 3. Pracovať s vlastným repozitárom tak, aby boli vydieť "commits" (editačné zmeny). Ideálne od celej dvojice.
- 4. V súbore "Inc/assignment.h" doplniť definície makier, ktoré sa budú použivať pri nastavovaní GPIO periférii a v samotnej aplikácii.
- 5. V subore "Src/main.c" implementovať konfiguráciu GPIO periférii s využitím makier z "assignment.h"
- 6. Odovzdáva sa odkaz k vašemu repozitáru.
+
   <p align="center">
     <img src="https://github.com/VRS-Predmet/vrs_cvicenie_2/blob/master/documents/circuit.png" width="1000" title="LED, button and Stm32 - circuit.">
 </p>
